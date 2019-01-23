@@ -29,7 +29,7 @@ def nyc_pigeon_organizer
         if pigeon_list.has_key?(name)
           pigeon_list[name][attributes] << characteristic.to_s
         else
-          pigeon_list[name][attributes] = [characteristic.to_s]
+          pigeon_list[name] = {attributes => [characteristic.to_s]}
         end
       end
     end
