@@ -1,31 +1,31 @@
 require 'pry'
 
-def nyc_pigeon_organizer
+def nyc_pigeon_organizer(data)
   
-  pigeon_data = {
-    :color => {
-      :purple => ["Theo", "Peter Jr.", "Lucky"],
-      :grey => ["Theo", "Peter Jr.", "Ms. K"],
-      :white => ["Queenie", "Andrew", "Ms. K", "Alex"],
-      :brown => ["Queenie", "Alex"]
-    },
-    :gender => {
-      :male => ["Alex", "Theo", "Peter Jr.", "Andrew", "Lucky"],
-      :female => ["Queenie", "Ms. K"]
-    },
-    :lives => {
-      "Subway" => ["Theo", "Queenie"],
-      "Central Park" => ["Alex", "Ms. K", "Lucky"],
-      "Library" => ["Peter Jr."],
-     "City Hall" => ["Andrew"]
-    }
-  }
+#  pigeon_data = {
+#    :color => {
+#      :purple => ["Theo", "Peter Jr.", "Lucky"],
+#      :grey => ["Theo", "Peter Jr.", "Ms. K"],
+#      :white => ["Queenie", "Andrew", "Ms. K", "Alex"],
+#      :brown => ["Queenie", "Alex"]
+#    },
+#    :gender => {
+#      :male => ["Alex", "Theo", "Peter Jr.", "Andrew", "Lucky"],
+#      :female => ["Queenie", "Ms. K"]
+#    },
+#    :lives => {
+#      "Subway" => ["Theo", "Queenie"],
+#      "Central Park" => ["Alex", "Ms. K", "Lucky"],
+#      "Library" => ["Peter Jr."],
+#     "City Hall" => ["Andrew"]
+#    }
+#  }
   
   pigeon_list = {}
-  pigeon_data.each do |attributes, hash|
+  data.each do |attributes, hash|
     hash.each do |characteristic, array|
       array.each do |name|
-        binding.pry
+#        binding.pry
         if pigeon_list.has_key?(name)
           pigeon_list[name][attributes] << characteristic.to_s
         else
@@ -36,4 +36,4 @@ def nyc_pigeon_organizer
   end
 end
 
-nyc_pigeon_organizer
+#nyc_pigeon_organizer
