@@ -19,9 +19,9 @@ require 'pry'
     }
   }
 
-def nyc_pigeon_organizer(data)
+def nyc_pigeon_organizer
   pigeon_list = {}
-  data.each do |attributes, hash|
+  pigeon_data.each do |attributes, hash|
     hash.each do |characteristic, array|
       array.each do |name|
         binding.pry
