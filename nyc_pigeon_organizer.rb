@@ -6,7 +6,7 @@ def nyc_pigeon_organizer
     :color => {
       :purple => ["Theo", "Peter Jr.", "Lucky"],
       :grey => ["Theo", "Peter Jr.", "Ms. K"],
-     :white => ["Queenie", "Andrew", "Ms. K", "Alex"],
+      :white => ["Queenie", "Andrew", "Ms. K", "Alex"],
       :brown => ["Queenie", "Alex"]
     },
     :gender => {
