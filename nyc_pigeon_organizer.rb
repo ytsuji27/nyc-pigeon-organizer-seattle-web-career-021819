@@ -30,7 +30,7 @@ def nyc_pigeon_organizer(data)
           if pigeon_list[name].has_key?(attributes)
             pigeon_list[name][attributes] << characteristic.to_s
           else
-            pigeon_list[name] = {attributes => [characteristic.to_s]}
+            pigeon_list[name] = pigeon_list.merge({attributes => [characteristic.to_s]})
           end
         else
           pigeon_list[name] = {attributes => [characteristic.to_s]}
