@@ -27,9 +27,10 @@ def nyc_pigeon_organizer(data)
       array.each do |name|
 #        binding.pry
         if pigeon_list.has_key?(name)
-          pigeon_list[name][attributes] << characteristic.to_s
-        else
-          pigeon_list[name] = {attributes => [characteristic.to_s]}
+          if pigeon_list[name].has_key?(attributes)
+            pigeon_list[name][attributes] << characteristic.to_s
+          else
+            pigeon_list[name] = {attributes => [characteristic.to_s]}
         end
       end
     end
