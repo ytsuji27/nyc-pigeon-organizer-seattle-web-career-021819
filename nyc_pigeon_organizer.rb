@@ -1,3 +1,14 @@
 def nyc_pigeon_organizer(data)
-  # write your code here!
+  pigeon_list = {}
+  data.each do |attributes, hash|
+    hash.each do |characteristic, array|
+      array.each do |name|
+        if pigeon_list.has_key?(name)
+          pigeon_list[name][attributes] << characteristic.to_s
+        else
+          pigeon_list[name][attributes] = [characteristic.to_s]
+        end
+      end
+    end
+  end
 end
