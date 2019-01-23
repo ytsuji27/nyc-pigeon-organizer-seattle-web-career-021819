@@ -31,6 +31,9 @@ def nyc_pigeon_organizer(data)
             pigeon_list[name][attributes] << characteristic.to_s
           else
             pigeon_list[name] = {attributes => [characteristic.to_s]}
+          end
+        else
+          pigeon_list[name] = {attributes => [characteristic.to_s]}
         end
       end
     end
